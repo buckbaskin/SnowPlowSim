@@ -1,0 +1,6 @@
+slip factor - moves only executed with a certain percentage chance
+	this will highlight the difference between robots that actively think and preprogrammed paths
+
+discretize the snow and robot
+have snow stacks in each array location that each get knocked forward or sideways proportional to the robot direction (up down left or right/ 8 box)
+robot rotates in a square, pushes on one side
