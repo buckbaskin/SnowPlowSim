@@ -1,8 +1,8 @@
-package simulator;
+package simpleSimulator;
 
 import java.util.Random;
 
-public class RandomController extends Controller {
+public class RandomController extends SimpleController {
 
 	Random r;
 	int robot_x;
@@ -24,7 +24,7 @@ public class RandomController extends Controller {
 		this.field_y = field_y;
 	}
 	
-	public Command request_next_move(boolean valid_last_move)
+	public SimpleCommand request_next_move(boolean valid_last_move)
 	{
 		if (!valid_last_move)
 		{
@@ -33,7 +33,7 @@ public class RandomController extends Controller {
 			System.out.println("robox: "+robot_x+" vs. fieldx: "+field_x+
 					"\nroboy: "+robot_y+" vs. fieldy: "+field_y);
 		}
-		Command c = new Command();
+		SimpleCommand c = new SimpleCommand();
 		/*
 		 * a and b   -> up
 		 * a and b'  -> right

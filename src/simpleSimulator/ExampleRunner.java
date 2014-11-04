@@ -1,4 +1,4 @@
-package simulator;
+package simpleSimulator;
 
 import java.util.Scanner;
 
@@ -18,11 +18,11 @@ public class ExampleRunner {
 		int robot_start_x = 3;
 		int robot_start_y = 2;
 
-		Controller c = new DoubleTController(field_x, field_y, 
+		SimpleController c = new DoubleTController(field_x, field_y, 
 				snow_start_x, snow_start_y, snow_height, snow_width, snow_depth,
 				robot_start_x, robot_start_y);
 
-		Simulator s = new Simulator(field_x, field_y);
+		SimpleSimulator s = new SimpleSimulator(field_x, field_y);
 
 		for(int i = 0; i < 1; i++)
 		{

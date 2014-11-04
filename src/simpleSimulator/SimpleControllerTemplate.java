@@ -1,8 +1,8 @@
-package simulator;
+package simpleSimulator;
 
-public class ControllerTemplate extends Controller{
+public class SimpleControllerTemplate extends SimpleController{
 
-	public ControllerTemplate(int field_x, int field_y, 
+	public SimpleControllerTemplate(int field_x, int field_y, 
 			int snow_start_x, int snow_start_y, int snow_height, int snow_width,
 			double snow_depth, 
 			int start_x, int start_y) {
@@ -26,9 +26,9 @@ public class ControllerTemplate extends Controller{
 		
 	}
 	
-	public Command request_next_move(boolean last_valid)
+	public SimpleCommand request_next_move(boolean last_valid)
 	{
-		Command c = new Command();
+		SimpleCommand c = new SimpleCommand();
 		//add controll logic here for step to step commands.
 		// c.a and c.b set the movement patten.
 		/*

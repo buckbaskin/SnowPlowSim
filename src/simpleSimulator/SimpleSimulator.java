@@ -1,13 +1,13 @@
-package simulator;
+package simpleSimulator;
 
 import java.util.Scanner;
 
-public class Simulator 
+public class SimpleSimulator 
 {
 	double[][] snow_model;
 	int robot_x;
 	int robot_y;
-	Controller c;
+	SimpleController c;
 	double max_snow = 61.0; //assume starts with 3 each
 	double blade_height = 30;
 	double initial_snow;
@@ -23,12 +23,12 @@ public class Simulator
 
 	double max_depth;
 
-	VisualSim v;
+	SimpleVisualSim v;
 
-	public Simulator(int x_size, int y_size)
+	public SimpleSimulator(int x_size, int y_size)
 	{
 		snow_model = new double[x_size][y_size];
-		v = new VisualSim(this);
+		v = new SimpleVisualSim(this);
 		max_depth = 0;
 	}
 
@@ -57,7 +57,7 @@ public class Simulator
 		}
 		System.out.println("Snow setup complete");
 	}
-	public void set_robot(int x_start, int y_start, Controller controller)
+	public void set_robot(int x_start, int y_start, SimpleController controller)
 	{
 		robot_x = x_start;
 		robot_y = y_start;
@@ -107,7 +107,7 @@ public class Simulator
 		{
 			hit_obstacle = true;
 		}
-		Command comm = c.request_next_move(last_valid);
+		SimpleCommand comm = c.request_next_move(last_valid);
 		if(!last_valid && comm.done == null) 
 		{
 			System.out.println("Move Warning: Unsuccesful Last Move");

@@ -1,6 +1,6 @@
-package simulator;
+package simpleSimulator;
 
-public class Command {
+public class SimpleCommand {
 	
 	/*
 	 * a and b   -> up
@@ -15,11 +15,11 @@ public class Command {
 	boolean plow_left;
 	String done;
 	
-	public Command()
+	public SimpleCommand()
 	{
 		this(true,true,true,true);
 	}
-	public Command(boolean left, boolean right, boolean straight, boolean p_left)
+	public SimpleCommand(boolean left, boolean right, boolean straight, boolean p_left)
 	{
 		a = left;
 		b = right;
@@ -27,7 +27,7 @@ public class Command {
 		plow_left = p_left;
 		done = null;
 	}
-	public Command(String s)
+	public SimpleCommand(String s)
 	{
 		String[] split = s.split("|");
 		if(split[0].equals("up"))

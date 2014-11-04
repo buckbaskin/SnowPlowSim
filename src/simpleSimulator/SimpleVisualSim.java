@@ -1,4 +1,4 @@
-package simulator;
+package simpleSimulator;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -7,14 +7,14 @@ import java.awt.Graphics2D;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class VisualSim extends JFrame
+public class SimpleVisualSim extends JFrame
 {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -6708652923467522296L;
 
-	public Simulator to_draw;
+	public SimpleSimulator to_draw;
 	JPanel pj = new JPanel();
 
 	int max_x;
@@ -22,7 +22,7 @@ public class VisualSim extends JFrame
 
 	int scale = 30;
 
-	public VisualSim(Simulator s)
+	public SimpleVisualSim(SimpleSimulator s)
 	{
 		to_draw = s;
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

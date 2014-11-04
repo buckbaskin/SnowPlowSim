@@ -1,6 +1,6 @@
-package simulator;
+package simpleSimulator;
 
-public class DoubleTController extends Controller{
+public class DoubleTController extends SimpleController{
 
 	int next_move;
 	public DoubleTController(int field_x, int field_y, int snow_start_x,
@@ -18,9 +18,9 @@ public class DoubleTController extends Controller{
 	 * a' and b  -> left
 	 */
 	
-	public Command request_next_move(boolean last_valid)
+	public SimpleCommand request_next_move(boolean last_valid)
 	{
-		Command c = new Command();
+		SimpleCommand c = new SimpleCommand();
 		if(next_move % 9 == 0)
 		{ //go forward, plow left or right
 			c.a = true;
