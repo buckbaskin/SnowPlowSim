@@ -40,8 +40,11 @@ public class Concept {
 		// TODO
 		// from a list of observations:
 		// right now, just going known sensors to find unknown feature
-		// for known sensors:
-		//     
+		// what it can do is guess random observations and match
+		//   weighted more towards stuff that matches data well
+		// i.e. take a guess, convert to headings, find deviations, score
+		
+		// next point is a weighted average + weighted stdev, use that as normal distribution
 	}
 	
 	
